@@ -1,0 +1,111 @@
+* {
+    
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 50px;
+}
+
+/* Style for divs within the container */
+div {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    border: 1px solid #ddd; /* Add border */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Add border */
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #2892a7;
+    color: white;
+}
+
+/* Button styles */
+button {
+    background-color: #2892a7;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #0d3840;
+}
+
+button[type="submit"] {
+    background-color: #2892a7;
+}
+
+button[type="submit"]:hover {
+    background-color: #0d3840;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%; /* Adjust to take up a percentage of the container */
+    max-width: 400px; /* Optional: set a max width for the form */
+    margin: auto; /* Center the form horizontally */
+    justify-content: right;
+    border: 1px solid #ddd; /* Add border to form */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    background-color: white; /* White background for the form */
+}
+
+form label {
+    margin-bottom: 5px;
+    color: #333;
+    margin-top: 10px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    width: 100%; /* Full width for inputs */
+}
+
+form button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0d3840;
+    color: white;
+}

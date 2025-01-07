@@ -1,0 +1,52 @@
+<div class="container">
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>User_Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of list; let i = index">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.password }}</td>
+            <td>
+              <button (click)="onEdit(item)">Edit</button>
+              <button (click)="deleteApi(item.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button (click)="getapi()">Get</button>
+    </div>
+  
+    <form [formGroup]="CustForm">
+      <label for="userId">User_Id</label>
+      <input placeholder="enter user_id" formControlName="id" />
+    
+      <label for="Name">Name</label>
+      <input placeholder="enter name" formControlName="name" />
+  
+      <label for="EmailId">Email_Id</label>
+      <input placeholder="enter email_id" formControlName="email" />
+    
+      <label for="pass">Password</label>
+      <input placeholder="enter password" formControlName="password" />
+  
+      @if(userobj.id == 0){
+        <button type="submit" (click)="postApi()">Save</button>
+    }
+    @else{
+        <div *ngFor="let item of list">
+        <button type="submit" (click)="putApi(item.id)">update</button></div>
+    }    </form>
+  </div>
+  
+    
+<button (click)="gets()">gets</button>
